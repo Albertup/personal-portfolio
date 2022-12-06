@@ -8,9 +8,8 @@ const Translators = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-
 position: fixed;
-top: 0rem;
+top: -0.5rem;
 right: 2rem;
 
 z-index: 3;
@@ -22,7 +21,7 @@ cursor: pointer;
 `
 const LineTop = styled(motion.span)`
 width: 2px;
-height: 3rem;
+height: 3.5rem;
 background-color: #161514;
 
 `

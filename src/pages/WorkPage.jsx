@@ -73,6 +73,7 @@ const WorkPage = () => {
         <LogoComp theme='dark'/>
         <SocialIcons theme='dark'/>
         <HomeButton/>
+        <TitleComp text={t('capwork')} top='10%' right='20%' />
         <Main ref={ref} variants={container} initial='hidden' animate='show'>
         {Work.map( d =>
         <CardComp key={d.id} data={d}/>
@@ -82,7 +83,6 @@ const WorkPage = () => {
         <Rotate ref={circle}>
           <Circle width={80} height={80} fill={DarkTheme.text}/>
         </Rotate>
-        <TitleComp text={t('capwork')} top='10%' right='20%' />
     </ThemeProvider>
     
   )

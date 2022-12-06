@@ -120,10 +120,10 @@ const CardComp = (props) => {
         <Title>{name}</Title>
         <Tags>{tags.map((i,id) =>{return <Tag key={id}>#{i}</Tag>})}</Tags>
         <Footer>
-            <Link to={{pathname: `${demo}`}} target="_blank">
+            <Link to={{pathname: `${demo}`}} target="_blank" passHref={true}>
                 WEB
             </Link>
-            <Git to={{pathname: `${github}`}} target="_blank">
+            <Git to={{pathname: `${github}`}} target="_blank" passHref={true}>
                 <Github width={40} height={40}/>
             </Git>
         </Footer>
