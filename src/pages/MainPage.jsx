@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 // import HomeButton from '../components/HomeButton'
@@ -9,6 +9,71 @@ import TransComp from '../components/TransComp'
 import { MyContext } from '../context/MyContext'
 import { Circle } from '../data/AllSvgs'
 import { motion } from 'framer-motion'
+import SoundBarComp from '../components/SoundBarComp'
+import "../components/SpinnComp.css";
+
+
+const SpinnerContainer = styled.div`
+display: flex;
+position: fixed;
+background: ${props => props.theme.text};
+background-color: ${props => props.theme.text};
+width: 100vw;
+height: 100vh;
+`
+
+
+const Spinner = styled.div`
+display: flex;
+position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+z-index:10;
+
+&>*:nth-child(2){
+    animation-delay: 0.1s;
+}
+&>*:nth-child(3){
+    animation-delay: 0.2s;
+}
+&>*:nth-child(4){
+    animation-delay: 0.3s;
+}
+&>*:nth-child(5){
+    animation-delay: 0.4s;
+}
+&>*:nth-child(6){
+    animation-delay: 0.5s;
+}
+&>*:nth-child(7){
+    animation-delay: 0.6s;
+}
+&>*:nth-child(8){
+    animation-delay: 0.7s;
+}
+&>*:nth-child(9){
+    animation-delay: 0.8s;
+}
+&>*:nth-child(10){
+    animation-delay: 0.9s;
+}
+`
+const play = keyframes`
+0%{transform:scaleY(0);}
+50%{transform:scaleY(2);}
+100%{transform:scaleY(0);}
+`
+
+const Wave = styled.span`
+background: ${props => props.theme.body};
+border: 1px solid ${props => props.theme.body};
+animation: ${play} 1s ease infinite;
+height: 3rem;
+width: 0.20rem;
+margin: 0 0.2rem;
+border-radius: 0.1rem;
+`
 
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
@@ -85,6 +150,12 @@ to {
 }
 `
 
+const bigger = keyframes`
+0%{transform:scale(0);}
+50%{transform:scale(2);}
+100%{transform:scale(1);}
+`
+
 const Center = styled.button`
 position: absolute;
 top: ${props => props.click ? '85%' : '50%'};
@@ -103,9 +174,11 @@ transition: all 1s ease;
 
 &>:first-child {
   animation: ${rotate} infinite 1.5s linear;
+  
 }
 
 &>:last-child {
+  animation: ${bigger} 2s linear;
   display: ${props => props.click ? 'none' : 'inline-block'};
   padding-top: 1rem;
 }
@@ -127,38 +200,100 @@ const MainPage = () => {
   const {t} = useContext(MyContext);
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
+  const [data, setData] = useState([]);
+  console.log(data);
+  const [loading, setloading] = useState(undefined);
+  const [completed, setcompleted] = useState(undefined);
+
+    useEffect(() => {
+    setTimeout(() => {
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => response.json())
+        .then((json) => {
+          setData(json);
+          setloading(true);
+          setTimeout(() => {
+          setcompleted(true);
+          }, 1000);
+        });
+    }, 3000);
+  }, []);
+
+
+
+
+
+
   return (
-    <MainContainer>
-          <DarkDiv click={click}/>
-        <Container>
-          {/* <HomeButton/>  */}
-          <LogoComp theme={click ? 'dark' : 'light'}/>
-          <SocialIcons theme={click ? 'dark' : 'light'}/>
-          <TransComp/>
-          <Center click={click}>
-            <Circle onClick={() => handleClick()} width={click ? '12vw' : '20vw'} height={click ? '12vh' : '20vh'} fill='currentColor'/>
-            <span>{t('clickme')}</span>
-          </Center>
-          <Contact target="_blank" to={{pathname:"mailto:garcia.muñoz.albert@gmail.com"}}>
-              <motion.h2 initial={{y:-200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('saluda')}</motion.h2>
-          </Contact>
-          <Gallery to="/gallery">
-              <motion.h2 initial={{y:-200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('gallery')}</motion.h2>
-          </Gallery>
-          <Work to="/work" click={click}>
-              <motion.h2 initial={{y:-200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('work')}</motion.h2>
-          </Work>
-          <BottomBar>
-            <About to="/about" click={click}>
-                <motion.h2 initial={{y:200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('about')}</motion.h2>
-            </About>
-            <Skills to="/skills">
-                <motion.h2 initial={{y:200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('skills')}</motion.h2>
-            </Skills>
-          </BottomBar>
-        </Container>
-        {click ? <IntroComp click={click}/> : null}
-    </MainContainer>
+
+    <>
+    {!completed ? (
+      <>
+        {!loading ? (
+          <SpinnerContainer>
+                <Spinner>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                  <Wave></Wave>
+                </Spinner>
+          </SpinnerContainer>
+        ) : (
+          <>
+            <LogoComp/>
+          </>
+          
+        )}
+      </>
+    ) : (
+      <>
+        
+        <MainContainer>
+            <DarkDiv click={click}/>
+          <Container>
+          <SoundBarComp/>
+            {/* <HomeButton/>  */}
+            <LogoComp theme={click ? 'dark' : 'light'}/>
+            <SocialIcons theme={click ? 'dark' : 'light'}/>
+            <TransComp/>
+            <Center click={click}>
+              <Circle onClick={() => handleClick()} width={click ? '12vw' : '20vw'} height={click ? '12vh' : '20vh'} fill='currentColor'/>
+              <span>{t('clickme')}</span>
+            </Center>
+            <Contact as="a" target="_blank" href="mailto:garcia.muñoz.albert@gmail.com">
+                <motion.h2 initial={{y:-200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('saluda')}</motion.h2>
+            </Contact>
+            <Gallery to="/gallery">
+                <motion.h2 initial={{y:-200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('gallery')}</motion.h2>
+            </Gallery>
+            <Work to="/work" click={click}>
+                <motion.h2 initial={{y:-200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('work')}</motion.h2>
+            </Work>
+            <BottomBar>
+              <About to="/about" click={click}>
+                  <motion.h2 initial={{y:200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('about')}</motion.h2>
+              </About>
+              <Skills to="/skills">
+                  <motion.h2 initial={{y:200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>{t('skills')}</motion.h2>
+              </Skills>
+            </BottomBar>
+          </Container>
+          {click ? <IntroComp click={click}/> : null}
+      </MainContainer>
+
+      </>
+    )}
+  </>
+
+
+    
   )
 }
 

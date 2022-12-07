@@ -30,12 +30,6 @@ const Title = styled.h2`
 font-size: calc(0.6em + 0.5vw);
 `
 
-const Description = styled.h2`
-font-size: calc(0.8em + 0.5vw);
-font-family: 'Karla', sans-serif;
-font-weight: 500;
-`
-
 const Tags = styled.div`
 border-top: 2px solid ${props => props.theme.body}; 
 padding-top: 0.5rem;
@@ -91,11 +85,8 @@ border-radius: 0 50px 0 0;
 
 ${Box}:hover & {
     border:1px solid ${props => props.theme.body};
-    
 }
-
 `
-
 
 //Framer motion configuration
 const Item = {
@@ -120,10 +111,10 @@ const CardComp = (props) => {
         <Title>{name}</Title>
         <Tags>{tags.map((i,id) =>{return <Tag key={id}>#{i}</Tag>})}</Tags>
         <Footer>
-            <Link to={{pathname: `${demo}`}} target="_blank" passHref={true}>
+            <Link as="a" href={`${demo}`} target="_blank" passHref={true}>
                 WEB
             </Link>
-            <Git to={{pathname: `${github}`}} target="_blank" passHref={true}>
+            <Git as="a" href={`${github}`} target="_blank" passHref={true}>
                 <Github width={40} height={40}/>
             </Git>
         </Footer>

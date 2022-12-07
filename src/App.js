@@ -25,7 +25,7 @@ function App() {
     <MyContext.Provider value={{t, changeLanguaje}}> 
       <GlobalStyle/>
       <ThemeProvider theme={LightTheme} >
-      <SoundBarComp/>
+      {/* <SoundBarComp/> */}
       <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
       <Route path="/" element={<MainPage/>}/>

@@ -26,26 +26,29 @@ height: 6rem;
 background-color: ${props => props.theme.text};
 background-color: ${props => props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 `
+
+const linkedIn = "https://www.linkedin.com/in/albertup";
+
 const SocialIcons = (props) => {
   return (
     <Icons>
-        <motion.div initial={{transform:"scale(0)"}} animate={{scale:[0,1,1.5,1]}} transition={{type:'spring', duration:1, delay:1}}>
-            <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"http://github.com/albertup"}}>
+        <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+            <NavLink  onClick={() => window.location.href = 'http://github.com/albertup'} target="_blank" rel='noreferrer' style={{color:'inherit'}}>
                 <Github  width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}/>
             </NavLink>
         </motion.div>
-        <motion.div initial={{transform:"scale(0)"}} animate={{scale:[0,1,1.5,1]}} transition={{type:'spring', duration:1, delay:1.2}}>
-            <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"http://twitter.com/Albertupgrade"}}>
-                <Twitter width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}/>
+        <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+            <NavLink onClick={() => window.location.href = 'http://twitter.com/Albertupgrade'} target="_blank" rel='noreferrer' style={{color:'inherit'}}>
+                <Twitter  width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}/>
             </NavLink>
         </motion.div>
-        <motion.div initial={{transform:"scale(0)"}} animate={{scale:[0,1,1.5,1]}} transition={{type:'spring', duration:1, delay:1.4}}>
-            <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.linkedin.com/in/albertup"}}>
+        <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+            <NavLink onClick={() => window.location.href = 'https://www.linkedin.com/in/albertup'} target="_blank" rel='noreferrer' style={{color:'inherit'}}>
                 <LinkedIn width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}/>
             </NavLink>
         </motion.div>
-        <motion.div initial={{transform:"scale(0)"}} animate={{scale:[0,1,1.5,1]}} transition={{type:'spring', duration:1, delay:1.6}}>
-            <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"http://codepen.io/albertup"}}>
+        <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+            <NavLink onClick={() => window.location.href = 'http://codepen.io/albertup'} target="_blank" rel='noreferrer' style={{color:'inherit'}} >
                 <Codepen width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}/>
             </NavLink>
         </motion.div>
