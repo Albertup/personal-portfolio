@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import Me from '../assets/images/profile-img.png'
+
 import { MyContext } from '../context/MyContext'
 import { motion } from 'framer-motion'
 import BackStreet from '../assets/images/backstreet.png'

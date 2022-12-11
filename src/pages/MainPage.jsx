@@ -8,9 +8,9 @@ import SocialIcons from '../components/SocialIcons'
 import TransComp from '../components/TransComp'
 import { MyContext } from '../context/MyContext'
 import { Circle } from '../data/AllSvgs'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import SoundBarComp from '../components/SoundBarComp'
-import "../components/SpinnComp.css";
+import LoaderComp from '../components/LoaderComp'
 
 
 const SpinnerContainer = styled.div`
@@ -174,7 +174,6 @@ transition: all 1s ease;
 
 &>:first-child {
   animation: ${rotate} infinite 1.5s linear;
-  
 }
 
 &>:last-child {
@@ -215,9 +214,9 @@ const MainPage = () => {
           setloading(true);
           setTimeout(() => {
           setcompleted(true);
-          }, 1000);
+          }, 3000);
         });
-    }, 3000);
+    }, 2000);
   }, []);
 
 
@@ -247,20 +246,22 @@ const MainPage = () => {
           </SpinnerContainer>
         ) : (
           <>
-            <LogoComp/>
+          <AnimatePresence>
+          <LoaderComp/>
+          </AnimatePresence>
+            
           </>
           
         )}
       </>
     ) : (
       <>
-        
         <MainContainer>
             <DarkDiv click={click}/>
           <Container>
           <SoundBarComp/>
             {/* <HomeButton/>  */}
-            <LogoComp theme={click ? 'dark' : 'light'}/>
+            <LogoComp theme={click ? 'dark' : 'light'} />
             <SocialIcons theme={click ? 'dark' : 'light'}/>
             <TransComp/>
             <Center click={click}>

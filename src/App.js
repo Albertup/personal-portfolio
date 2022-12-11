@@ -4,14 +4,14 @@ import { MyContext } from './context/MyContext';
 import { useTranslation } from "react-i18next"
 import GlobalStyle from './globalstyle';
 import { ThemeProvider } from 'styled-components';
-import { DarkTheme, LightTheme } from './data/Themes';
+import { LightTheme } from './data/Themes';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import MainPage from './pages/MainPage'
 import AboutPage from './pages/AboutPage'
 import GalleryPage from './pages/GalleryPage'
 import WorkPage from './pages/WorkPage'
 import MySkillsPage from './pages/MySkillsPage'
-import SoundBarComp from "./components/SoundBarComp"
+// import SoundBarComp from "./components/SoundBarComp"
 import { AnimatePresence } from 'framer-motion';
 
 function App() {

@@ -11,6 +11,11 @@ import ArrowComp from '../components/ArrowComp'
 import TitleComp from '../components/TitleComp'
 import { motion } from 'framer-motion'
 import { MyContext } from '../context/MyContext'
+import SoundBarComp from '../components/SoundBarComp'
+
+
+
+
 
 const MainContainer = styled(motion.div)`
 background-image: url(${img});
@@ -29,6 +34,7 @@ padding-bottom: 5rem;
 
 const Center = styled.div`
 display: flex;
+flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 padding-top: 10rem;
@@ -66,17 +72,21 @@ const BlogPage = () => {
     <MainContainer variants={container} initial='hidden' animate='show' exit={{opacity:0, transition:{duration: 0.5}}}>
       <Container >
           <LogoComp/>
+          <SoundBarComp/>
           <HomeButton/>
           <SocialIcons/>
           <ArrowComp numbers={numbers}/>
           <TitleComp text={t('capgall')} top="5rem" left="5rem" />
             <Center>
               <Grid>
+
                 {
                   Blogs.map(blog => {
+                    
                     return <GalleryComp key={blog.id} blog={blog}/>
                   })
                 }
+              
               </Grid>
             </Center>
       </Container>

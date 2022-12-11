@@ -14,7 +14,7 @@ position: fixed;
 bottom: 0;
 left: 2rem;
 
-z-index: 3;
+z-index: 11;
 
 &>*:not(:last-child) {
     margin: 0.5rem 0;
@@ -27,7 +27,7 @@ background-color: ${props => props.theme.text};
 background-color: ${props => props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 `
 
-const linkedIn = "https://www.linkedin.com/in/albertup";
+// const linkedIn = "https://www.linkedin.com/in/albertup";
 
 const SocialIcons = (props) => {
   return (

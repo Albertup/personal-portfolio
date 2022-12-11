@@ -1,14 +1,28 @@
+
+import { motion } from 'framer-motion'
 import React, { useRef, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import music from "../assets/audio/stranger-things-124008.mp3"
 
-const Box = styled.div`
+
+
+
+
+const MainContainer = styled(motion.div)`
 display: flex;
 cursor: pointer;
 position: fixed;
 left: 9rem;
 top:2rem;
 z-index:10;
+`
+
+
+const Box = styled(motion.div)`
+display: flex;
+cursor: pointer;
+position: fixed;
+
 
 &>*:nth-child(1){
     animation-delay: 0.2s;
@@ -58,6 +72,8 @@ const SoundBarComp = () => {
     }
 
   return (
+    <MainContainer>
+    <motion.div initial={{y:-200, transition: {type: 'spring', duration: 1.5, delay:1}}} animate={{y: 0, transition: {type: 'spring', duration: 1.5, delay:1}}}>
     <Box onClick={() => handleClick()}>
         <Line click={click}/>
         <Line click={click}/>
@@ -66,6 +82,8 @@ const SoundBarComp = () => {
         <Line click={click}/>
         <audio src={music} ref={ref} loop/>
     </Box>
+    </motion.div>
+    </MainContainer>
   )
 }
 

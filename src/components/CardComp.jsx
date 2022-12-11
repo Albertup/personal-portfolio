@@ -6,11 +6,11 @@ import { Github } from '../data/AllSvgs';
 
 
 const Box = styled(motion.li)`
-width: 16rem;
+width: 18rem;
 height: 40vh;
 background-color: ${props => props.theme.text};
 color: ${props => props.theme.body};
-padding: 1.5rem 2rem;
+padding: 1.8rem 2rem;
 margin-right: 8rem;
 border-radius: 0 50px 0 50px;
 display: flex;
@@ -81,7 +81,7 @@ height: 50%;
 background-size: cover;
 border: 1px solid transparent;
 background-position: center center;
-border-radius: 0 50px 0 0;
+border-radius: 0 40px 0 0;
 
 ${Box}:hover & {
     border:1px solid ${props => props.theme.body};

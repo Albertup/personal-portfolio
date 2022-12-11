@@ -11,4 +11,13 @@ export const en = {
     hi: "Hi,",
     imAlbert: "I'm Alberto García.",
     idesign: "I design and code simple yet interesting websites.",
+    designer: "Designer",
+    designertext: "I love to create design which speaks, Keep them clean, minimal and simple.",
+    tools: "Tools",
+    ilike: "I like to design",
+    developer: "Developer",
+    developertext: "I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.",
+    aboutme: "ABOUT ME",
+    textabout: "Web developer with a good level of English who wants to gain experience in design and programming. After more than 7 years working in companies related to marketing and technology, I have decided to go a step further and have acquired knowledge in Javascript, with React, Angular and Next, I have also managed to increase knowledge in areas never explored by me. I want to be part of your team to generate functional projects that exceed the expectations of clients/companies.",
+    resume: "Resume",
 }
