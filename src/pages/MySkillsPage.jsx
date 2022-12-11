@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
 import { LightTheme } from '../data/Themes'
-import {AngularSkill, AnimateSkill, BlenderSkill, CanvaSkill, CssSkill, Design, Develope, ElementorSkill, FigmaSkill, GithubSkill, GitSkill, HtmlSkill, IllusSkill, IndesSkill, JsSkill, MoreSkill, MysqlSkill, NodeSkill, PhotoSkill, PhpSkill, QxpressSkill, ReactSkill, WpSkill } from '../data/AllSvgs';
+import {AngularSkill, AnimateSkill, BlenderSkill, CanvaSkill, CssSkill, Design, Develope, ElementorSkill, FigmaSkill, GitSkill, HtmlSkill, IllusSkill, IndesSkill, JsSkill, MoreSkill, MysqlSkill, NodeSkill, PhotoSkill, PhpSkill, QxpressSkill, ReactSkill, WpSkill } from '../data/AllSvgs';
 import LogoComp from '../components/LogoComp';
 import SocialIcons from '../components/SocialIcons';
 import HomeButton from '../components/HomeButton';

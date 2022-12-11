@@ -3,7 +3,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-const Box = styled(motion(NavLink))`
+const Box = styled(motion.a)`
 width: calc(10rem + 15vw);
 text-decoration: none;
 height: 20rem;
@@ -87,7 +87,7 @@ const BlogComp = (props) => {
     const {name, tags, date, imgSrc, link} = props.blog;
   return (
     <Container variants={Item}>
-        <Box target="_blank" to={{pathname: link}} >
+        <Box target="_blank" href={link} rel="noreferrer">
         <Image img={imgSrc}/>
         <Title>{name}</Title>
         <HashTags>{tags.map((i,id) =>{return <Tag key={id}>#{i}</Tag>})}</HashTags>

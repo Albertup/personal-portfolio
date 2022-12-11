@@ -57,7 +57,7 @@ const container = {
   }
 }
 
-const BlogPage = () => {
+const GalleryPage = () => {
 
   const {t} = useContext(MyContext);
 
@@ -94,4 +94,4 @@ const BlogPage = () => {
   )
 }
 
-export default BlogPage
+export default GalleryPage
