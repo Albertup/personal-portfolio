@@ -9,7 +9,7 @@ import TransComp from '../components/TransComp'
 import { MyContext } from '../context/MyContext'
 import { Circle } from '../data/AllSvgs'
 import { AnimatePresence, motion } from 'framer-motion'
-import SoundBarComp from '../components/SoundBarComp'
+// import SoundBarComp from '../components/SoundBarComp'
 import LoaderComp from '../components/LoaderComp'
 
 
@@ -259,7 +259,7 @@ const MainPage = () => {
         <MainContainer>
             <DarkDiv click={click}/>
           <Container>
-          <SoundBarComp/>
+          {/* <SoundBarComp/> */}
             {/* <HomeButton/>  */}
             <LogoComp theme={click ? 'dark' : 'light'} />
             <SocialIcons theme={click ? 'dark' : 'light'}/>

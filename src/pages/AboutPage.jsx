@@ -11,7 +11,7 @@ import me from '../assets/images/me.png'
 import element from '../assets/images/satellis.png'
 import TitleComp from '../components/TitleComp';
 import { MyContext } from '../context/MyContext';
-import SoundBarComp from '../components/SoundBarComp';
+// import SoundBarComp from '../components/SoundBarComp';
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -140,7 +140,7 @@ const AboutPage = () => {
         <LogoComp theme='dark'/>
         <SocialIcons theme='dark'/>
         <HomeButton/>
-        <SoundBarComp/>
+        {/* <SoundBarComp/> */}
         <ParticlesComp theme='dark'/>
         <AboutImage>
           <img src={element} alt="Element"/>

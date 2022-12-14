@@ -53,9 +53,18 @@ export const Work = [
         tags:["SCSS","Javascript","HTML"],
         
         demo:"https://personal-portfolio-zeta-one.vercel.app/",
-        github:"https://github.com/Albertup/pokeapi"
+        github:"https://github.com/Albertup/personal-portfolio"
         
     },
-    
+    {
+        id:6,
+        name:"Shoplifting",
+        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1671062045/portfolio/grid_v4-min_eposil.png",
+        tags:["Wordpress","Woocommerce",],
+        
+        demo:"https://www.shoplifting.gq/",
+        github:"https://github.com/Albertup/personal-portfolio"
+        
+    },
   
 ] 
