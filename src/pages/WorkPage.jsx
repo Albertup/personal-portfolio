@@ -11,7 +11,7 @@ import CardComp from '../components/CardComp';
 import { Circle } from '../data/AllSvgs';
 import TitleComp from '../components/TitleComp';
 import { MyContext } from '../context/MyContext';
-// import SoundBarComp from '../components/SoundBarComp';
+import SoundBarComp from '../components/SoundBarComp';
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -72,7 +72,7 @@ const WorkPage = () => {
     <ThemeProvider theme={DarkTheme}>
       <Box>
         <LogoComp theme='dark'/>
-        {/* <SoundBarComp/> */}
+        <SoundBarComp/>
         <SocialIcons theme='dark'/>
         <HomeButton/>
         <TitleComp text={t('capwork')} top='10%' right='20%' />

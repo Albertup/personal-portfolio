@@ -9,7 +9,7 @@ import ParticlesComp from '../components/ParticlesComp';
 import TitleComp from '../components/TitleComp';
 // import DevSkillsComp from '../components/DevSkillsComp';
 // import RoundComp from '../components/RoundComp';
-// import SoundBarComp from '../components/SoundBarComp';
+import SoundBarComp from '../components/SoundBarComp';
 import { MyContext } from '../context/MyContext';
 
 const Box = styled.div`
@@ -160,7 +160,7 @@ const MySkillsPage = () => {
         <LogoComp theme='light'/>
         <SocialIcons theme='light'/>
         <HomeButton/>
-        {/* <SoundBarComp/> */}
+        <SoundBarComp/>
         <ParticlesComp theme='light'/>
         <Main>
           <Title>

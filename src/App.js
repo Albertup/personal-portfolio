@@ -11,7 +11,7 @@ import AboutPage from './pages/AboutPage'
 import GalleryPage from './pages/GalleryPage'
 import WorkPage from './pages/WorkPage'
 import MySkillsPage from './pages/MySkillsPage'
-import SoundBarComp from "./components/SoundBarComp"
+// import SoundBarComp from "./components/SoundBarComp"
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     <MyContext.Provider value={{t, changeLanguaje}}> 
       <GlobalStyle/>
       <ThemeProvider theme={LightTheme} >
-      <SoundBarComp/>
+      {/* <SoundBarComp/> */}
       <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
       <Route path="/" element={<MainPage/>}/>

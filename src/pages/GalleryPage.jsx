@@ -11,7 +11,7 @@ import ArrowComp from '../components/ArrowComp'
 import TitleComp from '../components/TitleComp'
 import { motion } from 'framer-motion'
 import { MyContext } from '../context/MyContext'
-// import SoundBarComp from '../components/SoundBarComp'
+import SoundBarComp from '../components/SoundBarComp'
 
 
 
@@ -72,7 +72,7 @@ const GalleryPage = () => {
     <MainContainer variants={container} initial='hidden' animate='show' exit={{opacity:0, transition:{duration: 0.5}}}>
       <Container >
           <LogoComp/>
-          {/* <SoundBarComp/> */}
+          <SoundBarComp/>
           <HomeButton/>
           <SocialIcons/>
           <ArrowComp numbers={numbers}/>
