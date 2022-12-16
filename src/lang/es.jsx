@@ -18,6 +18,6 @@ export const es = {
     developer: "Desarrollador",
     developertext: "Valoro el negocio o la marca para la que estoy creando, por lo que disfruto dando vida a nuevas ideas.",
     aboutme: "SOBRE MÍ",
-    textabout: "Desarrollador web con buen nivel de inglés con ganas de adquirir experiencia en  diseño y programaión. Tras más de 7 años trabajando en empresas relacionadas con el márketing y la tecnología he decidido dar un paso más y he adquirido conocimientos en Javascript, con React, Angular y Next, también he logrado incrementar el conocimiento en áreas nunca exploradas por mi. Deseo formar parte de tu equipo para generar proyectos funcionales que superen las expectativas de los clientes/empresas.",
+    textabout: "Desarrollador web con buen nivel de inglés con ganas de adquirir experiencia en  diseño y programación. Tras más de 7 años trabajando en empresas relacionadas con el márketing y la tecnología he decidido dar un paso más y he adquirido conocimientos en Javascript, con React, Angular y Next, también he logrado incrementar el conocimiento en áreas nunca exploradas por mi. Deseo formar parte de tu equipo para generar proyectos funcionales que superen las expectativas de los clientes/empresas.",
     resume: "Currículum",
 }
