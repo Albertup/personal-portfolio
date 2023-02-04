@@ -103,23 +103,38 @@ box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
 `
 const MContent =  styled.div`
 background-color: white;
-border-radius: 5px;
 padding: 20px;
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 width: 60%;
 height: 70%;
+color: ${props => props.theme.text};
+border: 2px solid ${props => props.theme.text};
+backdrop-filter: blur(2px);
+box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+&:hover {
+    color: ${props => props.theme.body};
+    background-color: ${props => props.theme.text};
+    transition: all 0.3s ease;
+}
+${MClose}:hover & {
+    border-bottom:1px solid ${props => props.theme.body};
+    
+}
 `
 
 const MClose =  styled.div`
-position: absolute;
-top: 10px;
-right: 10px;
-color:#fff;
-background-color: transparent;
+position: fixed;
+top: 30px;
+right: 30px;
+color: ${props => props.theme.text};
 border: 0;
 cursor: pointer;
 font-size: 24px;
 font-weight: bold;
+&:hover {
+    color: ${props => props.theme.body};
+    transition: all 0.3s ease;
+}
 `
 
 
