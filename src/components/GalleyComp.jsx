@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -83,16 +83,78 @@ const Item = {
     }
 }
 
+//Modal
+
+const MOverlay =  styled.div`
+position: fixed;
+z-index: 10;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+color: ${props => props.theme.text};
+border: 2px solid ${props => props.theme.text};
+backdrop-filter: blur(2px);
+box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+`
+const MContent =  styled.div`
+background-color: white;
+border-radius: 5px;
+padding: 20px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+width: 60%;
+height: 70%;
+`
+
+const MClose =  styled.div`
+position: absolute;
+top: 10px;
+right: 10px;
+color:#fff;
+background-color: transparent;
+border: 0;
+cursor: pointer;
+font-size: 24px;
+font-weight: bold;
+`
+
+
 const BlogComp = (props) => {
-    const {name, tags, date, imgSrc, link} = props.blog;
+    const {name, tags, date, imgSrc} = props.blog;
+    const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+    
   return (
     <Container variants={Item}>
-        <Box target="_blank" href={link} rel="noreferrer">
+        <Box  onClick={handleOpen}>
         <Image img={imgSrc}/>
         <Title>{name}</Title>
         <HashTags>{tags.map((i,id) =>{return <Tag key={id}>#{i}</Tag>})}</HashTags>
         <Date>{date}</Date>
         </Box>
+        {isOpen && (
+        <MOverlay onClick={handleClose}>
+          <MContent>
+            <MClose onClick={handleClose}>X</MClose>
+            <Image img={imgSrc}/>
+            <Title>{name}</Title>
+            <HashTags>{tags.map((i,id) =>{return <Tag key={id}>#{i}</Tag>})}</HashTags>
+            <Date>{date}</Date>
+          </MContent>
+        </MOverlay>
+      )}
     </Container>
     
   )

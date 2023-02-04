@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import LogoComp from '../components/LogoComp'
 import HomeButton from '../components/HomeButton'
 import SocialIcons from '../components/SocialIcons'
-import img from '../assets/images/backsky.png'
+import img from '../assets/images/backsky.webp'
 
 import {Blogs} from '../data/BlogData'
 import GalleryComp from '../components/GalleyComp'

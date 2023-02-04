@@ -7,8 +7,8 @@ import HomeButton from '../components/HomeButton';
 import ParticlesComp from '../components/ParticlesComp';
 
 import button from '../assets/svg/button.svg'
-import me from '../assets/images/me.png'
-import element from '../assets/images/satellis.png'
+import me from '../assets/images/me.webp'
+import element from '../assets/images/satellis.webp'
 import TitleComp from '../components/TitleComp';
 import { MyContext } from '../context/MyContext';
 import SoundBarComp from '../components/SoundBarComp';
@@ -150,7 +150,7 @@ const AboutPage = () => {
         <strong>{t('aboutme')}</strong>
         <br/>
         {t('textabout')}
-        <Button ><a href="https://drive.google.com/file/d/1ucGSLitvlQG6wvUULNQcPBTyL9wnOmPH/view?usp=sharing" target="_blank" rel="noreferrer"><img src={button} alt="button"/><span>{t('resume')}</span></a></Button>
+        <Button ><a href="https://drive.google.com/file/d/1YyVxLoB8INY2l4Nq1eM3RMnPwF4Sxczj/view?usp=sharing" target="_blank" rel="noreferrer"><img src={button} alt="button"/><span>{t('resume')}</span></a></Button>
         </Main>
         <TitleComp text={t('capabout')} top="10%" left="5%" />
       </Box>  

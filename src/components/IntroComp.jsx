@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { MyContext } from '../context/MyContext'
 import { motion } from 'framer-motion'
-import BackStreet from '../assets/images/backstreet.png'
+import BackStreet from '../assets/images/backstreet.webp'
 
 const Box = styled(motion.div)`
 position: absolute;

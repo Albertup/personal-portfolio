@@ -2,7 +2,7 @@ export const Work = [
     {
         id:1,
         name:"Pokemón API",
-        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1670697046/portfolio/pokeapi-min_ylchvi.png",
+        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1675538105/portfolio/pokemon_ht3qo9.webp",
         tags:["SCSS","Javascript","HTML"],
         
         demo:"https://pokeapi-epnyck2rc-albertup.vercel.app/",
@@ -11,7 +11,7 @@ export const Work = [
     {
         id:2,
         name:"Game Of Thrones API",
-        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1670697047/portfolio/got-min_vfsgjo.png",
+        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1675538106/portfolio/got_dhxqfw.webp",
         tags:["React","Javascript","SCSS"],
         
         demo:"https://game-of-thrones-master-1inpvzar4-albertup.vercel.app/",
@@ -21,8 +21,8 @@ export const Work = [
     {
         id:3,
         name:"AGDsigns",
-        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1670697047/portfolio/agdsings-min_whj22d.png",
-        tags:["SCSS","Javascript","HTML"],
+        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1675538105/portfolio/agdesign_rm9q0v.webp",
+        tags:["NormalizeCSS","Javascript","Frameworks"],
         
         demo:"https://agdsigns.vercel.app/",
         github:"https://github.com/Albertup/agdsigns"
@@ -30,8 +30,8 @@ export const Work = [
     {
         id:4,
         name:"Shoplifting",
-        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1670697046/portfolio/shoplifting-min_dxvosl.png",
-        tags:["SCSS","Javascript","HTML"],
+        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1675538105/portfolio/shoplifting_ecg1cb.webp",
+        tags:["SCSS","Javascript","Angular"],
         
         demo:"https://shoplifting.vercel.app/",
         github:"https://github.com/Albertup/shoplifting"
@@ -39,7 +39,7 @@ export const Work = [
     },{
         id:5,
         name:"Viajes-ECI",
-        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1670697046/portfolio/viajeseci-min_oojm9o.png",
+        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1675538105/portfolio/eci_id4mlz.webp",
         tags:["SCSS","Javascript","HTML"],
         
         demo:"https://viajes-8rg3mdouz-albertup.vercel.app/",
@@ -48,21 +48,21 @@ export const Work = [
     },
     {
         id:6,
-        name:"Portfolio",
-        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1670697046/portfolio/portfolio-min_bwmtgz.png",
-        tags:["SCSS","Javascript","HTML"],
+        name:"Slick-Pizza",
+        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1675538105/portfolio/slickpizza_mmbxc7.webp",
+        tags:["Tailwind","React","Frameworks"],
         
-        demo:"https://personal-portfolio-zeta-one.vercel.app/",
-        github:"https://github.com/Albertup/personal-portfolio"
+        demo:"https://slik-pizza.vercel.app/",
+        github:"https://github.com/Albertup/slik-pizza"
         
     },
     {
         id:6,
-        name:"Shoplifting",
-        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1671062045/portfolio/grid_v4-min_eposil.png",
-        tags:["Wordpress","Woocommerce",],
+        name:"Moco",
+        image:"https://res.cloudinary.com/dp85dl3cl/image/upload/v1675538106/portfolio/moco_rcz3f4.webp",
+        tags:["Wordpress","Woocommerce","Elementor"],
         
-        demo:"https://www.shoplifting.gq/",
+        demo:"https://moco.cf/",
         github:"https://github.com/Albertup/personal-portfolio"
         
     },
